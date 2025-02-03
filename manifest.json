@@ -2,7 +2,7 @@
     "name": "Multi-Timer",
     "short_name": "Timer",
     "description": "Eine App für mehrere parallele Timer",
-    "start_url": "/",
+    "start_url": "/multi-timer/",
     "display": "standalone",
     "background_color": "#f0f2f5",
     "theme_color": "#4CAF50",
