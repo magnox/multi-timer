@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Multi-Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Multi-Timer</h1>
+        </header>
+        
+        <main>
+            <div id="timer-container" class="timer-container">
+                <!-- Timer werden hier dynamisch eingefügt -->
+            </div>
+            
+            <div class="controls">
+                <button id="add-timer" class="btn" title="Neuen Timer hinzufügen">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <dialog id="timer-dialog">
+        <form id="timer-form">
+            <h2>Neuen Timer erstellen</h2>
+            <div class="form-group">
+                <label for="timer-name">Name:</label>
+                <input type="text" id="timer-name" required>
+            </div>
+            <div class="form-group">
+                <label for="timer-duration">Dauer (Minuten):</label>
+                <input type="number" id="timer-duration" min="1" required>
+                <div class="duration-presets">
+                    <button type="button" class="preset-btn" data-duration="1">1m</button>
+                    <button type="button" class="preset-btn" data-duration="2">2m</button>
+                    <button type="button" class="preset-btn" data-duration="5">5m</button>
+                    <button type="button" class="preset-btn" data-duration="10">10m</button>
+                    <button type="button" class="preset-btn" data-duration="15">15m</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Farbe:</label>
+                <div class="color-picker">
+                    <div class="color-option" data-color="#4CAF50"></div>
+                    <div class="color-option" data-color="#2196F3"></div>
+                    <div class="color-option" data-color="#F44336"></div>
+                    <div class="color-option" data-color="#FF9800"></div>
+                    <div class="color-option" data-color="#9C27B0"></div>
+                </div>
+            </div>
+            <div class="form-buttons">
+                <button type="submit">Erstellen</button>
+                <button type="button" id="cancel-timer">Abbrechen</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html> 
